@@ -1,0 +1,692 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #07111f;
+    --bg-secondary: #0b1828;
+    --card: #101f32;
+    --card-light: #14283f;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --primary: #22c55e;
+    --primary-dark: #16a34a;
+    --border: #24364d;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    width: 100%;
+    background: #091525;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 530px;
+    padding: 80px 7%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #0b3030,
+            transparent 50%
+        ),
+        var(--bg);
+}
+
+.hero-content {
+    max-width: 700px;
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+
+    color: var(--primary);
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero p {
+    color: var(--muted);
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: #04100a;
+}
+
+.btn.primary:hover {
+    background: var(--primary-dark);
+    color: white;
+}
+
+.btn.secondary {
+    background: var(--primary);
+    color: #04100a;
+}
+
+.btn.secondary:hover {
+    background: var(--primary-dark);
+    color: white;
+}
+
+
+/* =========================================================
+   HERO SECURITY CARD
+========================================================= */
+
+.hero-card {
+    width: 300px;
+
+    padding: 30px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.shield {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero-card h3 {
+    margin-bottom: 15px;
+}
+
+.status {
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+.status-dot {
+    display: inline-block;
+
+    width: 9px;
+    height: 9px;
+
+    background: var(--primary);
+
+    border-radius: 50%;
+
+    margin-right: 5px;
+}
+
+.security-score {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.security-score span {
+    color: var(--muted);
+}
+
+.security-score strong {
+    color: var(--primary);
+}
+
+.progress {
+    height: 8px;
+
+    background: #17273a;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 85%;
+    height: 100%;
+
+    background: var(--primary);
+}
+
+.small-text {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section {
+    padding: 60px 7%;
+}
+
+.section-heading {
+    max-width: 800px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.section-heading > span {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   AWARENESS CARDS
+========================================================= */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-top: 35px;
+}
+
+.card {
+    padding: 25px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+}
+
+.card:hover {
+    border-color: var(--primary);
+
+    transform: translateY(-3px);
+
+    transition: 0.2s;
+}
+
+.card h2,
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   CHECKLIST
+========================================================= */
+
+.checklist {
+    list-style: none;
+}
+
+.checklist li {
+    padding: 12px 0;
+
+    border-bottom: 1px solid var(--border);
+
+    color: #dbeafe;
+}
+
+.checklist li:last-child {
+    border-bottom: none;
+}
+
+.cta-card {
+    text-align: center;
+}
+
+
+/* =========================================================
+   HOME - PLATFORM FEATURES
+========================================================= */
+
+.features {
+    padding: 70px 7%;
+    background: var(--bg);
+}
+
+.feature-grid {
+    max-width: 1100px;
+
+    margin: 40px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.feature-card {
+    padding: 30px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    transition: 0.2s;
+}
+
+.feature-card:hover {
+    border-color: var(--primary);
+
+    transform: translateY(-3px);
+}
+
+.feature-icon {
+    font-size: 30px;
+}
+
+.feature-card h3 {
+    margin: 15px 0 10px;
+
+    font-size: 20px;
+}
+
+.feature-card p {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.feature-card a {
+    color: var(--primary);
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.feature-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   RISK MANAGEMENT
+========================================================= */
+
+.risk-section {
+    padding: 80px 7%;
+
+    background: var(--bg-secondary);
+}
+
+.risk-grid {
+    max-width: 1000px;
+
+    margin: 40px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.risk-card {
+    padding: 25px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.risk-card .risk-level {
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.risk-card p {
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+.risk-card.low {
+    border-top: 3px solid #22c55e;
+}
+
+.risk-card.medium {
+    border-top: 3px solid #eab308;
+}
+
+.risk-card.high {
+    border-top: 3px solid #f97316;
+}
+
+.risk-card.critical {
+    border-top: 3px solid #ef4444;
+}
+
+
+/* =========================================================
+   HOME CTA
+========================================================= */
+
+.cta {
+    max-width: 1100px;
+
+    margin: 70px auto;
+
+    padding: 50px 30px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.cta p {
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #050d18;
+
+    border-top: 1px solid var(--border);
+}
+
+.footer-container,
+.footer-content {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 45px 25px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 40px;
+}
+
+.footer h3,
+.footer-content h3 {
+    color: var(--primary);
+
+    margin-bottom: 10px;
+}
+
+.footer h4,
+.footer-content h4 {
+    margin-bottom: 12px;
+}
+
+.footer p,
+.footer-content p {
+    color: var(--muted);
+}
+
+.footer a,
+.footer-content a {
+    display: block;
+
+    width: fit-content;
+
+    margin-bottom: 8px;
+
+    color: var(--muted);
+
+    text-decoration: none;
+}
+
+.footer a:hover,
+.footer-content a:hover {
+    color: var(--primary);
+}
+
+.copyright {
+    padding: 18px 25px;
+
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .risk-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container,
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .risk-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container,
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        margin: 40px 20px;
+    }
+}

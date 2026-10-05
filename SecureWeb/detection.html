@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Threat Detection | Secure Web</title>
+
+    <!-- Main Website CSS -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <!-- Detection Page CSS -->
+    <link
+        rel="stylesheet"
+        href="css/detection.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav class="navbar">
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">🔐 Secure Web</a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="awareness.html">Awareness</a>
+            <a href="detection.html" class="active">Threat Detection</a>
+            <a href="assessment.html">Assessment</a>
+            <a href="login.html">Login</a>
+        </div>
+
+    </div>
+</nav>
+
+
+
+<!-- =========================================================
+     MAIN CONTENT
+========================================================= -->
+
+<main>
+
+
+    <!-- =====================================================
+         DETECTION HERO
+    ====================================================== -->
+
+    <section class="detection-hero">
+
+        <span class="badge">
+            THREAT DETECTION
+        </span>
+
+
+        <h1>
+
+            Analyze Before You
+
+            <span>
+                Trust.
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            Check suspicious URLs, inspect domains,
+            analyze hashes, and identify common security
+            indicators before interacting with potentially
+            harmful resources.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DETECTION TOOLS
+    ====================================================== -->
+
+    <section class="detector-section">
+
+        <div class="detector-grid">
+
+
+            <!-- =================================================
+                 1. SUSPICIOUS URL CHECKER
+            ================================================== -->
+
+            <div class="detector-card active">
+
+
+                <div class="detector-icon">
+                    🔗
+                </div>
+
+
+                <h2>
+                    Suspicious URL Checker
+                </h2>
+
+
+                <p>
+
+                    Analyze a URL for common phishing
+                    and suspicious URL characteristics.
+
+                </p>
+
+
+                <form id="urlForm">
+
+
+                    <label for="url">
+                        Website URL
+                    </label>
+
+
+                    <div class="url-input">
+
+                        <input
+                            type="url"
+                            id="url"
+                            name="url"
+                            placeholder="https://example.com"
+                            autocomplete="off"
+                            required
+                        >
+
+
+                        <button type="submit">
+                            Analyze
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+
+                <div
+                    id="urlResult"
+                    class="result-box"
+                ></div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 2. IP / DOMAIN LOOKUP
+            ================================================== -->
+
+            <div class="detector-card">
+
+
+                <div class="detector-icon">
+                    🌐
+                </div>
+
+
+                <h2>
+                    IP / Domain Lookup
+                </h2>
+
+
+                <p>
+
+                    Check an IP address or domain for
+                    basic network and DNS information.
+
+                </p>
+
+
+                <form id="lookupForm">
+
+
+                    <label for="lookup">
+                        IP Address / Domain
+                    </label>
+
+
+                    <div class="url-input">
+
+                        <input
+                            type="text"
+                            id="lookup"
+                            name="lookup"
+                            placeholder="example.com or 8.8.8.8"
+                            autocomplete="off"
+                            required
+                        >
+
+
+                        <button type="submit">
+                            Lookup
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+
+                <div
+                    id="lookupResult"
+                    class="result-box"
+                ></div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 3. HASH ANALYSIS
+            ================================================== -->
+
+            <div class="detector-card">
+
+
+                <div class="detector-icon">
+                    #️⃣
+                </div>
+
+
+                <h2>
+                    Hash Analysis
+                </h2>
+
+
+                <p>
+
+                    Analyze a file hash and identify its
+                    hash type before further investigation.
+
+                </p>
+
+
+                <form id="hashForm">
+
+
+                    <label for="hash">
+                        File Hash
+                    </label>
+
+
+                    <div class="url-input">
+
+                        <input
+                            type="text"
+                            id="hash"
+                            name="hash"
+                            placeholder="Enter MD5, SHA-1 or SHA-256"
+                            autocomplete="off"
+                            spellcheck="false"
+                            required
+                        >
+
+
+                        <button type="submit">
+                            Analyze
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+
+                <div
+                    id="hashResult"
+                    class="result-box"
+                ></div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 4. PASSWORD STRENGTH
+            ================================================== -->
+
+            <div class="detector-card">
+
+
+                <div class="detector-icon">
+                    🔑
+                </div>
+
+
+                <h2>
+                    Password Strength
+                </h2>
+
+
+                <p>
+
+                    Check password complexity locally without
+                    sending the password to the server.
+
+                </p>
+
+
+                <button
+                    type="button"
+                    class="tool-button"
+                    onclick="window.location.href='password-checker.html'"
+                >
+                    Check Password
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RISK CLASSIFICATION
+    ====================================================== -->
+
+    <section class="risk-info">
+
+
+        <div class="section-heading">
+
+
+            <span>
+                RISK CLASSIFICATION
+            </span>
+
+
+            <h2>
+                How URL Risk Is Classified
+            </h2>
+
+
+            <p>
+
+                The checker evaluates multiple observable
+                URL characteristics.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="risk-grid">
+
+
+            <!-- LOW -->
+
+            <div class="risk-card low">
+
+                <strong>
+                    LOW
+                </strong>
+
+
+                <p>
+
+                    No major suspicious indicators
+                    were detected.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- MEDIUM -->
+
+            <div class="risk-card medium">
+
+                <strong>
+                    MEDIUM
+                </strong>
+
+
+                <p>
+
+                    One or more indicators require
+                    additional attention.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- HIGH -->
+
+            <div class="risk-card high">
+
+                <strong>
+                    HIGH
+                </strong>
+
+
+                <p>
+
+                    Multiple suspicious characteristics
+                    were detected.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- CRITICAL -->
+
+            <div class="risk-card critical">
+
+                <strong>
+                    CRITICAL
+                </strong>
+
+
+                <p>
+
+                    Several strong phishing or malicious
+                    URL indicators were detected.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+
+    <div class="footer-content">
+
+
+        <!-- ABOUT -->
+
+        <div>
+
+            <h3>
+                🔐 Secure Web
+            </h3>
+
+
+            <p>
+
+                Cybersecurity Awareness and Threat
+                Management System.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- QUICK LINKS -->
+
+        <div>
+
+            <h4>
+                Quick Links
+            </h4>
+
+
+            <a href="awareness.html">
+                Awareness
+            </a>
+
+
+            <a href="detection.html">
+                Threat Detection
+            </a>
+
+
+            <a href="assessment.html">
+                Assessment
+            </a>
+
+        </div>
+
+
+
+        <!-- ACCOUNT -->
+
+        <div>
+
+            <h4>
+                Account
+            </h4>
+
+
+            <a href="login.html">
+                Login
+            </a>
+
+
+            <a href="register.html">
+                Register
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="copyright">
+
+        © 2026 Secure Web.
+        Cybersecurity Awareness Platform.
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="js/detection.js"></script>
+
+
+</body>
+
+</html>

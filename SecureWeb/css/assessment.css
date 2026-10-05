@@ -1,0 +1,752 @@
+/* =========================================================
+   SECURE WEB
+   SECURITY ASSESSMENT
+========================================================= */
+
+
+/* =========================================================
+   ASSESSMENT HERO
+========================================================= */
+
+.assessment-hero {
+    padding: 90px 6% 65px;
+    text-align: center;
+    background: #07111f;
+}
+
+.assessment-hero .badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #18d66b;
+    border-radius: 30px;
+    color: #18d66b;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.assessment-hero h1 {
+    max-width: 850px;
+    margin: 22px auto 15px;
+    font-size: 48px;
+    line-height: 1.15;
+}
+
+.assessment-hero h1 span {
+    color: #18d66b;
+}
+
+.assessment-hero p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: #9db0c8;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   MAIN ASSESSMENT AREA
+========================================================= */
+
+.assessment-section {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 55px 0 80px;
+}
+
+
+/* =========================================================
+   ASSESSMENT CARD
+========================================================= */
+
+.assessment-card {
+    margin-bottom: 25px;
+    padding: 32px;
+    box-sizing: border-box;
+
+    background: #101f33;
+    border: 1px solid #203a56;
+    border-radius: 16px;
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
+.card-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 32px;
+}
+
+.card-number {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #18d66b;
+    border-radius: 10px;
+
+    color: #18d66b;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card-heading h2 {
+    margin: 2px 0 8px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.card-heading p {
+    margin: 0;
+    color: #9db0c8;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   QUIZ PROGRESS
+========================================================= */
+
+.quiz-progress {
+    margin-bottom: 32px;
+}
+
+.progress-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    color: #b7c8da;
+    font-size: 13px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 7px;
+
+    overflow: hidden;
+
+    background: #0a1726;
+    border-radius: 20px;
+}
+
+.progress-fill {
+    width: 10%;
+    height: 100%;
+
+    background: #18d66b;
+    border-radius: 20px;
+
+    transition: width 0.3s ease;
+}
+
+
+/* =========================================================
+   QUIZ CONTAINER
+========================================================= */
+
+.quiz-container {
+    min-height: 300px;
+}
+
+.quiz-container h3 {
+    margin: 0 0 24px;
+
+    color: #edf4fb;
+    font-size: 20px;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   ANSWER OPTIONS
+========================================================= */
+
+.answer-options {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.answer-option {
+    width: 100%;
+
+    padding: 16px 18px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #29445f;
+    border-radius: 10px;
+
+    background: #0b1827;
+    color: #e8f0f8;
+
+    text-align: left;
+
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.5;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.answer-option:hover {
+    border-color: #18d66b;
+    background: #102235;
+    transform: translateY(-1px);
+}
+
+.answer-option.selected {
+    border-color: #18d66b;
+    background: #102c23;
+}
+
+.answer-option.correct {
+    border-color: #18d66b;
+    background: #103824;
+}
+
+.answer-option.incorrect {
+    border-color: #ef5350;
+    background: #351719;
+}
+
+.answer-option.disabled {
+    cursor: default;
+}
+
+.answer-option.disabled:hover {
+    transform: none;
+}
+
+.answer-option.correct:hover {
+    border-color: #18d66b;
+    background: #103824;
+}
+
+.answer-option.incorrect:hover {
+    border-color: #ef5350;
+    background: #351719;
+}
+
+
+/* =========================================================
+   QUESTION FEEDBACK
+========================================================= */
+
+.question-feedback {
+    min-height: 24px;
+
+    margin: 12px 0 20px;
+
+    color: #9db0c8;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.question-feedback.correct {
+    color: #18d66b;
+}
+
+.question-feedback.incorrect {
+    color: #ff7774;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.tool-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 12px 23px;
+
+    border: 1px solid #18d66b;
+    border-radius: 8px;
+
+    background: #18d66b;
+    color: #06120b;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.tool-button:hover {
+    background: #24ed79;
+    border-color: #24ed79;
+    transform: translateY(-1px);
+}
+
+.tool-button:active {
+    transform: translateY(0);
+}
+
+.tool-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================================================
+   QUIZ RESULT
+========================================================= */
+
+.quiz-result {
+    display: none;
+
+    padding: 35px 0 15px;
+
+    text-align: center;
+}
+
+.quiz-result.show {
+    display: block;
+}
+
+.score-circle {
+    width: 150px;
+    height: 150px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 6px solid #18d66b;
+    border-radius: 50%;
+
+    background: #0b1827;
+}
+
+.score-circle span {
+    color: #18d66b;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.score-circle small {
+    margin-top: 5px;
+    color: #9db0c8;
+    font-size: 13px;
+}
+
+.quiz-result h2 {
+    margin: 0 0 10px;
+    color: #ffffff;
+}
+
+.quiz-result p {
+    max-width: 650px;
+
+    margin: 0 auto 25px;
+
+    color: #9db0c8;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SECURITY CHECKLIST
+========================================================= */
+
+.security-checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checklist-item {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+
+    padding: 17px;
+
+    border: 1px solid #29445f;
+    border-radius: 10px;
+
+    background: #0b1827;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.checklist-item:hover {
+    border-color: #18d66b;
+    background: #0e1e2e;
+}
+
+.checklist-item input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+
+    margin-top: 1px;
+
+    position: relative;
+
+    border: 1px solid #3b5872;
+    border-radius: 5px;
+
+    background: #0b1827;
+
+    box-sizing: border-box;
+}
+
+.checklist-item input:checked + .custom-checkbox {
+    border-color: #18d66b;
+    background: #18d66b;
+}
+
+.checklist-item input:checked + .custom-checkbox::after {
+    content: "✓";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -53%);
+
+    color: #06120b;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.checklist-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.checklist-content strong {
+    color: #edf4fb;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.checklist-content small {
+    color: #9db0c8;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CHECKLIST BUTTON
+========================================================= */
+
+#checklistButton {
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   CHECKLIST RESULT
+========================================================= */
+
+.checklist-result {
+    display: none;
+
+    margin-top: 20px;
+    padding: 18px;
+
+    border: 1px solid #29445f;
+    border-radius: 10px;
+
+    background: #0b1827;
+}
+
+.checklist-result.show {
+    display: block;
+}
+
+.checklist-score {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.checklist-score strong {
+    color: #18d66b;
+    font-size: 28px;
+}
+
+.checklist-score span {
+    color: #9db0c8;
+    font-size: 13px;
+}
+
+.checklist-progress {
+    width: 100%;
+    height: 7px;
+
+    margin-top: 15px;
+
+    overflow: hidden;
+
+    background: #16283b;
+    border-radius: 20px;
+}
+
+.checklist-progress-fill {
+    height: 100%;
+
+    background: #18d66b;
+    border-radius: 20px;
+
+    transition: width 0.3s ease;
+}
+
+.assessment-save-note {
+    margin: 15px 0 0;
+
+    color: #9db0c8;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   RECOMMENDATIONS
+========================================================= */
+
+.recommendations {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.recommendation-empty {
+    padding: 30px;
+
+    border: 1px dashed #29445f;
+    border-radius: 10px;
+
+    text-align: center;
+
+    color: #9db0c8;
+}
+
+.recommendation-empty span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 30px;
+}
+
+.recommendation-empty p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.recommendation-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    border: 1px solid #29445f;
+    border-radius: 10px;
+
+    background: #0b1827;
+}
+
+.recommendation-icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #183425;
+    color: #18d66b;
+
+    font-weight: 800;
+}
+
+.recommendation-item h4 {
+    margin: 2px 0 7px;
+
+    color: #edf4fb;
+
+    font-size: 15px;
+}
+
+.recommendation-item p {
+    margin: 0;
+
+    color: #9db0c8;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .assessment-hero {
+        padding: 60px 5% 45px;
+    }
+
+    .assessment-hero h1 {
+        font-size: 36px;
+    }
+
+    .assessment-section {
+        width: 94%;
+        padding-top: 30px;
+    }
+
+    .assessment-card {
+        padding: 22px;
+    }
+
+    .card-heading {
+        gap: 12px;
+    }
+
+    .card-heading h2 {
+        font-size: 20px;
+    }
+
+    .card-number {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+    }
+
+    .quiz-container h3 {
+        font-size: 18px;
+    }
+
+    .checklist-score {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .answer-option {
+        padding: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .assessment-hero h1 {
+        font-size: 30px;
+    }
+
+    .assessment-hero p {
+        font-size: 14px;
+    }
+
+    .assessment-card {
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    .card-heading {
+        align-items: flex-start;
+    }
+
+    .card-heading h2 {
+        font-size: 18px;
+    }
+
+    .card-heading p {
+        font-size: 13px;
+    }
+
+    .tool-button {
+        width: 100%;
+    }
+
+    .score-circle {
+        width: 125px;
+        height: 125px;
+    }
+
+    .score-circle span {
+        font-size: 36px;
+    }
+
+}

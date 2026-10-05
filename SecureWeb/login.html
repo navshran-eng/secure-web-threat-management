@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Secure Web</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">🔐 Secure Web</a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="awareness.html">Awareness</a>
+            <a href="detection.html">Threat Detection</a>
+            <a href="assessment.html">Assessment</a>
+            <a href="login.html" class="active">Login</a>
+        </div>
+
+    </div>
+</nav>
+
+
+<div class="auth-page">
+
+    <div class="auth-brand">
+
+        <div>
+
+            <span class="badge">
+                CYBERSECURITY AWARENESS
+            </span>
+
+            <h1>
+                Welcome<br>
+                <span>back.</span>
+            </h1>
+
+            <p>
+                Sign in to access your cybersecurity dashboard,
+                threat analysis and security assessments.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="auth-box">
+
+        <h2>Login</h2>
+
+        <p class="auth-subtitle">
+            Enter your account credentials.
+        </p>
+
+        <div id="message"></div>
+
+        <form id="loginForm">
+
+            <label for="email">
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+            >
+
+
+            <label for="password">
+                Password
+            </label>
+
+            <div class="password-wrapper">
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <button
+                    type="button"
+                    onclick="togglePassword('password')"
+                >
+                    Show
+                </button>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="auth-submit"
+            >
+                Login
+            </button>
+
+        </form>
+
+
+        <p class="auth-footer">
+
+            Don't have an account?
+
+            <a href="register.html">
+                Create Account
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "user_id": 1,
+        "type": "URL Analysis",
+        "target": "http://example.com",
+        "risk_level": "Low",
+        "risk_score": 15,
+        "indicators": [
+            "The URL does not use HTTPS."
+        ],
+        "detected_at": "2026-09-22 08:52:55"
+    },
+    {
+        "id": 2,
+        "user_id": 1,
+        "type": "URL Analysis",
+        "target": "https://example.com",
+        "risk_level": "Low",
+        "risk_score": 0,
+        "indicators": [],
+        "detected_at": "2026-09-22 08:53:04"
+    },
+    {
+        "id": 3,
+        "user_id": 1,
+        "type": "IP / Domain Lookup",
+        "target": "8.8.8.8",
+        "risk_level": "Low",
+        "risk_score": 0,
+        "indicators": [],
+        "detected_at": "2026-10-05 18:40:41"
+    }
+]

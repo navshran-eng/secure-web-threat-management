@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Secure Web</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body>
+
+<div class="auth-page">
+
+    <div class="auth-brand">
+        <a href="index.html">🔐 Secure Web</a>
+
+        <div>
+            <span class="badge">SECURITY PLATFORM</span>
+            <h1>Create your<br><span>Secure Web</span> account.</h1>
+            <p>
+                Create an account to access threat detection,
+                security assessments and incident management.
+            </p>
+        </div>
+    </div>
+
+    <div class="auth-box">
+
+        <h2>Create Account</h2>
+        <p class="auth-subtitle">Start improving your cybersecurity.</p>
+
+        <div id="message"></div>
+
+        <form id="registerForm">
+
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+            >
+
+            <label for="password">Password</label>
+
+            <div class="password-wrapper">
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Create a password"
+                    required
+                >
+
+                <button type="button" onclick="togglePassword('password')">
+                    Show
+                </button>
+            </div>
+
+            <div class="password-strength">
+                <div id="strengthBar"></div>
+            </div>
+
+            <small id="strengthText"></small>
+
+            <label for="confirmPassword">Confirm Password</label>
+
+            <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Confirm your password"
+                required
+            >
+
+            <button type="submit" class="auth-submit">
+                Create Account
+            </button>
+
+        </form>
+
+        <p class="auth-footer">
+            Already have an account?
+            <a href="login.html">Login</a>
+        </p>
+
+    </div>
+
+</div>
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>

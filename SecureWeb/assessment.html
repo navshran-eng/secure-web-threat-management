@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Security Assessment | Secure Web
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/assessment.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">🔐 Secure Web</a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="awareness.html">Awareness</a>
+            <a href="detection.html">Threat Detection</a>
+            <a href="assessment.html" class="active">Assessment</a>
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+</nav>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main>
+
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
+    <section class="assessment-hero">
+
+        <span class="badge">
+            SECURITY ASSESSMENT
+        </span>
+
+        <h1>
+
+            Test Your
+
+            <span>
+                Security Awareness.
+            </span>
+
+        </h1>
+
+        <p>
+
+            Evaluate your cybersecurity knowledge,
+            identify common security weaknesses,
+            and receive practical recommendations.
+
+        </p>
+
+    </section>
+
+
+    <!-- =================================================
+         ASSESSMENT CONTENT
+    ================================================== -->
+
+    <section class="assessment-section">
+
+
+        <!-- =============================================
+             01 - QUIZ
+        ============================================== -->
+
+        <div class="assessment-card">
+
+
+            <div class="card-heading">
+
+                <span class="card-number">
+                    01
+                </span>
+
+                <div>
+
+                    <h2>
+                        Cybersecurity Quiz
+                    </h2>
+
+                    <p>
+                        Answer the questions to calculate
+                        your security awareness score.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUIZ PROGRESS -->
+
+            <div class="quiz-progress">
+
+                <div class="progress-info">
+
+                    <span id="questionNumber">
+                        Question 1 of 10
+                    </span>
+
+                    <span id="progressPercent">
+                        10%
+                    </span>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progressFill"
+                        class="progress-fill"
+                        style="width: 10%;"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUIZ -->
+
+            <div
+                id="quizContainer"
+                class="quiz-container"
+            >
+
+                <h3 id="questionText">
+                    Loading question...
+                </h3>
+
+
+                <div
+                    id="answerOptions"
+                    class="answer-options"
+                ></div>
+
+
+                <div
+                    id="questionFeedback"
+                    class="question-feedback"
+                ></div>
+
+
+                <button
+                    id="nextQuestion"
+                    class="tool-button"
+                    type="button"
+                    disabled
+                >
+                    Next Question
+                </button>
+
+            </div>
+
+
+            <!-- QUIZ RESULT -->
+
+            <div
+                id="quizResult"
+                class="quiz-result"
+            >
+
+                <div class="score-circle">
+
+                    <span id="finalScore">
+                        0
+                    </span>
+
+                    <small>
+                        / 100
+                    </small>
+
+                </div>
+
+
+                <h2>
+                    Assessment Complete
+                </h2>
+
+
+                <p id="scoreMessage">
+                    Your security awareness score
+                    will appear here.
+                </p>
+
+
+                <button
+                    id="restartQuiz"
+                    class="tool-button"
+                    type="button"
+                >
+                    Retake Assessment
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================
+             02 - CHECKLIST
+        ============================================== -->
+
+        <div class="assessment-card">
+
+
+            <div class="card-heading">
+
+                <span class="card-number">
+                    02
+                </span>
+
+                <div>
+
+                    <h2>
+                        Vulnerability Checklist
+                    </h2>
+
+                    <p>
+                        Select the security practices
+                        you currently follow.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="securityChecklist"
+                class="security-checklist"
+            >
+
+
+                <!-- PASSWORD -->
+
+                <label class="checklist-item">
+
+                    <input
+                        type="checkbox"
+                        name="securityPractice"
+                        value="password"
+                    >
+
+                    <span class="custom-checkbox"></span>
+
+                    <span class="checklist-content">
+
+                        <strong>
+                            I use strong and unique passwords.
+                        </strong>
+
+                        <small>
+                            Passwords are not reused across
+                            important accounts.
+                        </small>
+
+                    </span>
+
+                </label>
+
+
+                <!-- MFA -->
+
+                <label class="checklist-item">
+
+                    <input
+                        type="checkbox"
+                        name="securityPractice"
+                        value="mfa"
+                    >
+
+                    <span class="custom-checkbox"></span>
+
+                    <span class="checklist-content">
+
+                        <strong>
+                            I use multi-factor authentication.
+                        </strong>
+
+                        <small>
+                            MFA is enabled on important accounts
+                            whenever available.
+                        </small>
+
+                    </span>
+
+                </label>
+
+
+                <!-- UPDATES -->
+
+                <label class="checklist-item">
+
+                    <input
+                        type="checkbox"
+                        name="securityPractice"
+                        value="updates"
+                    >
+
+                    <span class="custom-checkbox"></span>
+
+                    <span class="checklist-content">
+
+                        <strong>
+                            I keep my software updated.
+                        </strong>
+
+                        <small>
+                            Operating systems and applications
+                            receive security updates.
+                        </small>
+
+                    </span>
+
+                </label>
+
+
+                <!-- PHISHING -->
+
+                <label class="checklist-item">
+
+                    <input
+                        type="checkbox"
+                        name="securityPractice"
+                        value="phishing"
+                    >
+
+                    <span class="custom-checkbox"></span>
+
+                    <span class="checklist-content">
+
+                        <strong>
+                            I verify suspicious messages and links.
+                        </strong>
+
+                        <small>
+                            I check senders and URLs before
+                            clicking unfamiliar links.
+                        </small>
+
+                    </span>
+
+                </label>
+
+
+                <!-- WIFI -->
+
+                <label class="checklist-item">
+
+                    <input
+                        type="checkbox"
+                        name="securityPractice"
+                        value="wifi"
+                    >
+
+                    <span class="custom-checkbox"></span>
+
+                    <span class="checklist-content">
+
+                        <strong>
+                            I use public Wi-Fi carefully.
+                        </strong>
+
+                        <small>
+                            I avoid entering sensitive information
+                            on untrusted networks.
+                        </small>
+
+                    </span>
+
+                </label>
+
+
+                <!-- BACKUP -->
+
+                <label class="checklist-item">
+
+                    <input
+                        type="checkbox"
+                        name="securityPractice"
+                        value="backup"
+                    >
+
+                    <span class="custom-checkbox"></span>
+
+                    <span class="checklist-content">
+
+                        <strong>
+                            I maintain important backups.
+                        </strong>
+
+                        <small>
+                            Important files are backed up regularly.
+                        </small>
+
+                    </span>
+
+                </label>
+
+
+                <!-- CHECKLIST BUTTON -->
+
+                <button
+                    id="checklistButton"
+                    class="tool-button"
+                    type="button"
+                >
+                    Calculate Security Score
+                </button>
+
+
+                <!-- CHECKLIST RESULT -->
+
+                <div
+                    id="checklistResult"
+                    class="checklist-result"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================
+             03 - RECOMMENDATIONS
+        ============================================== -->
+
+        <div class="assessment-card">
+
+
+            <div class="card-heading">
+
+                <span class="card-number">
+                    03
+                </span>
+
+                <div>
+
+                    <h2>
+                        Security Recommendations
+                    </h2>
+
+                    <p>
+                        Recommendations will be generated
+                        from your assessment results.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="recommendations"
+                class="recommendations"
+            >
+
+                <div class="recommendation-empty">
+
+                    <span>
+                        🛡️
+                    </span>
+
+                    <p>
+                        Complete the assessment to receive
+                        personalized security recommendations.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <div>
+
+            <h3>
+                🔐 Secure Web
+            </h3>
+
+            <p>
+                Cybersecurity Awareness and Threat
+                Management System.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="awareness.html">
+                Awareness
+            </a>
+
+            <a href="detection.html">
+                Threat Detection
+            </a>
+
+            <a href="assessment.html">
+                Assessment
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Account
+            </h4>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a href="register.html">
+                Register
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Secure Web.
+        Cybersecurity Awareness Platform.
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="js/assessment.js"></script>
+
+</body>
+</html>

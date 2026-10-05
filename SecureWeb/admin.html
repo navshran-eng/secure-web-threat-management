@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Secure Web</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="css/admin.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a
+                href="dashboard.php"
+                class="logo">
+
+                Secure Web
+
+            </a>
+
+            <div class="nav-links">
+
+                <a href="dashboard.php">
+                    Dashboard
+                </a>
+
+                <a href="awareness.html">
+                    Awareness
+                </a>
+
+                <a href="detection.html">
+                    Threat Detection
+                </a>
+
+                <a href="assessment.html">
+                    Assessment
+                </a>
+
+                <a href="incidents.html">
+                    Incidents
+                </a>
+
+                <a
+                    href="admin.html"
+                    class="active">
+
+                    Admin
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="admin-hero">
+
+        <div class="admin-hero-content">
+
+            <span class="admin-badge">
+                Administrator
+            </span>
+
+            <h1>
+                Admin Dashboard
+            </h1>
+
+            <p>
+                Monitor users, security threats and assessment activity
+                across the Secure Web platform.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="admin-container">
+
+
+        <!-- ================= STATUS ================= -->
+
+        <div
+            id="adminStatus"
+            class="admin-status"
+            aria-live="polite">
+
+            Loading administrator data...
+
+        </div>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="admin-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Security Overview
+                    </h2>
+
+                    <p>
+                        Overview of users, threats and security assessments.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="refreshAdmin"
+                    class="admin-refresh">
+
+                    Refresh
+
+                </button>
+
+            </div>
+
+
+            <div class="admin-stats">
+
+
+                <div class="admin-stat-card">
+
+                    <div class="stat-icon">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Users
+                        </span>
+
+                        <strong id="totalUsers">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-card">
+
+                    <div class="stat-icon">
+                        🛡️
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Threats
+                        </span>
+
+                        <strong id="totalThreats">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-card">
+
+                    <div class="stat-icon">
+                        🔴
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Critical Threats
+                        </span>
+
+                        <strong id="criticalThreats">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-card">
+
+                    <div class="stat-icon">
+                        🟠
+                    </div>
+
+                    <div>
+
+                        <span>
+                            High Threats
+                        </span>
+
+                        <strong id="highThreats">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-card">
+
+                    <div class="stat-icon">
+                        📋
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Assessments
+                        </span>
+
+                        <strong id="totalAssessments">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-card">
+
+                    <div class="stat-icon">
+                        📊
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Average Security Score
+                        </span>
+
+                        <strong id="averageScore">
+                            0%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= USERS ================= -->
+
+        <section class="admin-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Registered Users
+                    </h2>
+
+                    <p>
+                        Manage users registered on the Secure Web platform.
+                    </p>
+
+                </div>
+
+                <input
+                    type="search"
+                    id="userSearch"
+                    class="admin-search"
+                    placeholder="Search users..."
+                    autocomplete="off">
+
+            </div>
+
+
+            <div class="admin-table-wrapper">
+
+                <table class="admin-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                User
+                            </th>
+
+                            <th>
+                                Email
+                            </th>
+
+                            <th>
+                                Role
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Registered
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="userTableBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div
+                id="emptyUsers"
+                class="admin-empty"
+                hidden>
+
+                <div class="empty-icon">
+                    👥
+                </div>
+
+                <h3>
+                    No users found
+                </h3>
+
+                <p>
+                    No registered users match the current search.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= THREATS ================= -->
+
+        <section class="admin-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Threat Management
+                    </h2>
+
+                    <p>
+                        Security threats detected across user accounts.
+                    </p>
+
+                </div>
+
+                <select
+                    id="threatRiskFilter"
+                    class="admin-select">
+
+                    <option value="all">
+                        All Risk Levels
+                    </option>
+
+                    <option value="low">
+                        Low
+                    </option>
+
+                    <option value="medium">
+                        Medium
+                    </option>
+
+                    <option value="high">
+                        High
+                    </option>
+
+                    <option value="critical">
+                        Critical
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="admin-table-wrapper">
+
+                <table class="admin-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                User
+                            </th>
+
+                            <th>
+                                Threat Type
+                            </th>
+
+                            <th>
+                                Target
+                            </th>
+
+                            <th>
+                                Risk
+                            </th>
+
+                            <th>
+                                Score
+                            </th>
+
+                            <th>
+                                Detected
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="threatTableBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div
+                id="emptyThreats"
+                class="admin-empty"
+                hidden>
+
+                <div class="empty-icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    No threats found
+                </h3>
+
+                <p>
+                    No threat records match the selected filter.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ASSESSMENTS ================= -->
+
+        <section class="admin-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Assessment Overview
+                    </h2>
+
+                    <p>
+                        Recent security assessment results.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-table-wrapper">
+
+                <table class="admin-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                User
+                            </th>
+
+                            <th>
+                                Quiz Score
+                            </th>
+
+                            <th>
+                                Checklist Score
+                            </th>
+
+                            <th>
+                                Overall Score
+                            </th>
+
+                            <th>
+                                Assessment Level
+                            </th>
+
+                            <th>
+                                Date
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="assessmentTableBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div
+                id="emptyAssessments"
+                class="admin-empty"
+                hidden>
+
+                <div class="empty-icon">
+                    📋
+                </div>
+
+                <h3>
+                    No assessments found
+                </h3>
+
+                <p>
+                    No security assessments have been completed yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div>
+
+                <h3>
+                    Secure Web
+                </h3>
+
+                <p>
+                    Cybersecurity Awareness and Threat Management System.
+                </p>
+
+            </div>
+
+            <div>
+
+                <p>
+                    &copy; 2026 Secure Web. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>

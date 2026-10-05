@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "name": "Shranik Sunil Navale",
+        "email": "shranikn@gmail.com",
+        "password": "$2y$10$kpvxOjhmiyz1poVFJsZREemXkdrVudDbslNEEo9seWYppRsmp\/L5K",
+        "role": "admin",
+        "created_at": "2026-09-22 07:07:18"
+    }
+]
